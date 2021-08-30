@@ -11,7 +11,10 @@ export function ContinentBanner({ img, title }: ContinentBannerProps) {
       pos="relative"
     >
       <Flex
-        h="500px"
+      align="center"
+      justify="center"
+      w="100%"
+        h={["150px", "500px"]}
         _before={{
           bgImage: img,
           bgSize: "100%",
@@ -27,7 +30,7 @@ export function ContinentBanner({ img, title }: ContinentBannerProps) {
           zIndex: -1,
         }}
       >
-        <Heading color="white" mt="auto" mb="60px" ml="140px">
+        <Heading color="white">
           {title}
         </Heading>
       </Flex>

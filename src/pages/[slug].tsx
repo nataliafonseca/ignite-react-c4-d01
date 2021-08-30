@@ -46,32 +46,32 @@ export default function Continent({ continent }: ContinentProps) {
         mx="auto"
       >
         <ContinentBanner img={continent.bannerImage} title={continent.name} />
-        <Grid gap="70px" templateColumns="repeat(2, 1fr)" my="80px" px="140px">
-          <Text fontSize="1.5rem" textAlign="justify">
+        <Grid gap={["16px", "70px"]} templateColumns={["1fr", "repeat(2, 1fr)"]} my="80px" px={["16px", "140px"]}>
+          <Text fontSize={["0.875rem", "1.5rem"]} textAlign="justify">
             {continent.description}
           </Text>
-          <Flex dir="row" justify="space-between" align="center">
-            <Stack justify="center" align="center">
-              <Text fontSize="3rem" color="yellow.500" fontWeight="bold">
+          <Flex dir="row" justify={["space-evenly", "space-between"]} align="center">
+            <Stack justify="center" align="center" spacing="0">
+              <Text fontSize={["1.5rem", "3rem"]} color="yellow.500" fontWeight="bold">
                 {continent.numberOfCountries}
               </Text>
-              <Text fontSize="1.5rem" fontWeight="bold">
+              <Text fontSize={["1.125rem", "1.5rem"]} fontWeight={["regular", "bold"]}>
                 países
               </Text>
             </Stack>
-            <Stack justify="center" align="center">
-              <Text fontSize="3rem" color="yellow.500" fontWeight="bold">
+            <Stack justify="center" align="center" spacing="0">
+              <Text fontSize={["1.5rem", "3rem"]} color="yellow.500" fontWeight="bold">
                 {continent.numberOfLanguages}
               </Text>
-              <Text fontSize="1.5rem" fontWeight="bold">
-                língua
+              <Text fontSize={["1.125rem", "1.5rem"]} fontWeight={["regular", "bold"]}>
+                línguas
               </Text>
             </Stack>
-            <Stack justify="center" align="center">
-              <Text fontSize="3rem" color="yellow.500" fontWeight="bold">
+            <Stack justify="center" align="center" spacing="0">
+              <Text fontSize={["1.5rem", "3rem"]} color="yellow.500" fontWeight="bold">
                 {continent.numberOfPlus100Cities}
               </Text>
-              <Text fontSize="1.5rem" fontWeight="bold">
+              <Text fontSize={["1.125rem", "1.5rem"]} fontWeight={["regular", "bold"]}>
                 cidades +100
                 <Tooltip label="As 100 cidades mais visitadas por turistas.">
                   <Text
@@ -89,17 +89,17 @@ export default function Continent({ continent }: ContinentProps) {
           </Flex>
         </Grid>
         <Flex
-          px="140px"
+          px={["16px", "140px"]}
           justify="center"
           direction="column"
           w="100%"
           maxWidth="1440px"
           mx="auto"
         >
-          <Heading fontWeight="regular">Cidades +100</Heading>
-          <Grid gap="2rem" templateColumns="repeat(4, 1fr)" mt="40px" mb="80px">
+          <Heading fontWeight="regular" fontSize={["24px", "36px"]}>Cidades +100</Heading>
+          <Grid gap={["0", "32px"]} templateColumns={["1fr", "repeat(4, 1fr)"]} mt={["20px", "40px"]} >
             {continent.plus100Cities.map((city) => (
-              <Box key={city.name} w="256px" h="280px">
+              <Box key={city.name} w="256px" h="280px" mx="auto">
                 <Image
                   src={city.image}
                   borderRadius="5px 5px 0 0"

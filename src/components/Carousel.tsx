@@ -18,7 +18,14 @@ interface CarouselProps {
 
 export function Carousel({ continents }: CarouselProps) {
   return (
-    <Flex mx="auto" h="450px" w="100%" maxW="1240px" direction="row" mb="40px">
+    <Flex
+      mx="auto"
+      h={["250px", "450px"]}
+      w="100%"
+      maxW="1240px"
+      direction="row"
+      mb="40px"
+    >
       <Swiper
         slidesPerView={1}
         navigation
@@ -28,7 +35,7 @@ export function Carousel({ continents }: CarouselProps) {
         {continents.map((continent) => (
           <SwiperSlide key={continent.slug}>
             <Flex
-              h="450px"
+              h={["250px", "450px"]}
               _before={{
                 bgImage: continent.carouselImage,
                 bgSize: "100%",
@@ -49,7 +56,7 @@ export function Carousel({ continents }: CarouselProps) {
                   <a>
                     <Text
                       color="gray.50"
-                      fontSize="48px"
+                      fontSize={["24px", "48px"]}
                       fontWeight="bold"
                       textAlign="center"
                     >
@@ -57,7 +64,7 @@ export function Carousel({ continents }: CarouselProps) {
                     </Text>
                     <Text
                       color="gray.50"
-                      fontSize="24px"
+                      fontSize={["14px", "24px"]}
                       fontWeight="bold"
                       textAlign="center"
                     >

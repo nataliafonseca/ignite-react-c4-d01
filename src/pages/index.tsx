@@ -1,4 +1,4 @@
-import { Divider, Flex, Text } from "@chakra-ui/react";
+import { Divider, Flex, Text, useBreakpointValue } from "@chakra-ui/react";
 import { HomeBanner as Banner } from "../components/HomeBanner";
 import { GetStaticProps } from "next";
 import { Carousel } from "../components/Carousel";
@@ -30,11 +30,11 @@ export default function Home({ continents }: HomeProps) {
       >
         <Banner />
         <TravelTypes />
-        <Divider w="90px" h="2px" alignSelf="center" bgColor="gray.800" />
-        <Text mt="52px" fontSize="36px" fontWeight="medium" alignSelf="center">
+        <Divider mt={["36px","80px"]} mb={["24px","52px"]} w="90px" h="2px" alignSelf="center" bgColor="gray.800" />
+        <Text fontSize={["20px", "36px"]}  fontWeight="medium" alignSelf="center">
           Vamos nessa?
         </Text>
-        <Text mb="52px" fontSize="36px" fontWeight="medium" alignSelf="center">
+        <Text mb={["20px", "52px"]} fontSize={["20px", "36px"]} fontWeight="medium" alignSelf="center">
           Então escolha seu continente.
         </Text>
         <Carousel continents={continents} />
