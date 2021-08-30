@@ -1,7 +1,11 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, Icon, Link } from "@chakra-ui/react";
+import { useRouter } from "next/router";
+import { IoChevronBack } from "react-icons/io5";
 import Logo from "../../public/images/Logo.svg";
 
 export function Header() {
+  const { asPath } = useRouter();
+
   return (
     <Flex
       as="header"
@@ -10,9 +14,19 @@ export function Header() {
       h="100px"
       mx="auto"
       align="center"
-      justify="center"
+      pl="140px"
+      pr="calc(140px + 32px)"
     >
-      <Logo />
+      {asPath !== "/" && (
+        <Link href="/">
+          <a>
+            <Icon as={IoChevronBack} fontSize="32" />
+          </a>
+        </Link>
+      )}
+      <Flex w="100%" justify="center">
+        <Logo />
+      </Flex>
     </Flex>
   );
 }

@@ -1,4 +1,5 @@
 import { Divider, Flex, Text } from "@chakra-ui/react";
+import { HomeBanner as Banner } from "../components/HomeBanner";
 import { GetStaticProps } from "next";
 import { Carousel } from "../components/Carousel";
 import { Header } from "../components/Header";

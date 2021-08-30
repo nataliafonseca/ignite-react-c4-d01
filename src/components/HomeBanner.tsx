@@ -1,7 +1,7 @@
-import { Box, Flex, HStack, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import AirplaneImg from "../../public/images/Airplane.svg";
 
-export function Banner() {
+export function HomeBanner() {
   return (
     <Flex
       bgImage="url('/images/Banner.png')"
