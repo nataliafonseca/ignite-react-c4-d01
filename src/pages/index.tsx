@@ -22,8 +22,9 @@ export default function Home() {
           Vamos nessa?
         </Text>
         <Text mb="52px" fontSize="36px" fontWeight="medium" alignSelf="center">
-          Então escolha seu continente
+          Então escolha seu continente.
         </Text>
+        <Carousel />
       </Flex>
     </>
   );

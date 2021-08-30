@@ -1,9 +1,9 @@
 import { Flex, Text, VStack } from "@chakra-ui/react";
-import CocktailImg from "../../public/images/cocktail.svg";
-import BuildingImg from "../../public/images/building.svg";
-import EarthImg from "../../public/images/earth.svg";
-import MuseumImg from "../../public/images/museum.svg";
-import SurfImg from "../../public/images/surf.svg";
+import CocktailImg from "../../public/images/TravelTypes/cocktail.svg";
+import BuildingImg from "../../public/images/TravelTypes/building.svg";
+import EarthImg from "../../public/images/TravelTypes/earth.svg";
+import MuseumImg from "../../public/images/TravelTypes/museum.svg";
+import SurfImg from "../../public/images/TravelTypes/surf.svg";
 
 export function TravelTypes() {
   return (
